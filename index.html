@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./styles/output.css" />
+    <title>Dev Burguer</title>
+</head> 
+
+<body>
+    <header class="w-full h-[420px] bg-zinc-900 bg-home bg-cover bg-center">
+        <div class="w-full h-full flex flex-col justify-center items-center">
+            <img class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-100"
+                src="./assets/logo-hamburgueria.png" alt="logo dev burguer">
+
+            <h1 class="text-3xl mt-4 mb-2 text-white">Dev Burguer</h1>
+
+            <span class="text-white font-medium">Rua dev sucesso 145, Fortaleza - CE</span>
+
+            <div class="bg-green-600 px-4 py-1 rounded-lg mt-5" id="date-span">
+                <span>Seg á Dom 18:00 - 21:30</span>
+            </div>
+        </div> 
+    </header>
+
+    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">Cardápio</h2>
+
+    <div id="menu">
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
+            <!--produto 1 item-->
+            <div class="flex gap-2">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-1.svg"
+                    alt="hamburguer smash">
+
+                    <div>
+                    <p class="font-bold">Smash Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Smash Burguer" data-price="18.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 1 item-->
+
+            <!--produto 2 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-2.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Meat Lover's Delight</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de  2 carnes
+                        bovinas, bacon, queijo cheddar derretido, e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 23</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Meat Lover Delight" data-price="23">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 2 item-->
+
+            <!--produto 3 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-3.svg"
+                    alt="hamburguer smash">
+
+         
+       <div>
+                    <p class="font-bold">Double Chese Meat Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 20</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Double Chese Meat Burguer" data-price="20">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 3 item-->
+
+            <!--produto 4 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-4.svg" alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Chicken Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 19.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chicken Burguer" data-price="19.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 4 item-->
+
+            <!--produto 5 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-5.png"
+                    alt="smash">
+
+                <div>
+                    <p class="font-bold">Big Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 25.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Big Burguer" data-price="25.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 5 item-->
+
+            <!--produto 6 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-6.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Love Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 24</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Love Burguer" data-price="24">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 6 item-->
+
+            <!--produto 7 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-7.svg"
+                    alt=" smash">
+
+                <div>
+                    <p class="font-bold">Chicken Meat Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 30.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Chicken Meat Burguer"data-price="30.50">
+                            <i class="fa fa-cart-plus text-lg text-white" data-name="S" data-price="R$ 18.50"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 7 item-->
+
+            <!--produto 8 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb-8.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Vegetarian Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 17.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Vegetarian Burguer" data-price="17.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 8 item-->
+
+            <!--produto 9 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb9.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Big Meat Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 20</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Big Meat Burguer" data-price="20">
+                            <i class="fa fa-cart-plus text-lg text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 9 item-->
+
+            <!--produto 10 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb10.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">egg Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 23.30</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Egg Burguer" data-price="23.30">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 10 item-->
+
+            <!--produto 11 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb11.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Big Salad</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 25</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Big Salad" data-price="25">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 11 item-->
+
+            <!--produto 12 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb12.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Egg Bacon Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Egg Bacon Burguer" data-price="18">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 12 item-->
+
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/haamb13.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Super Big Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 35</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Super Big Burguer" data-price="35">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 13 item-->
+
+            <!--produto 14 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb14.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Super Big Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 35</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Super Big Burguer" data-price="35">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 14 item-->
+
+            <!--produto 15 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb15.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Super Big Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 35</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Super Big Burguer" data-price="35">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 15 item-->
+
+            <!--produto 16 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/hamb16.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Super Big Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 35</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Super Big Burguer" data-price="35">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 16 item-->
+
+            <!--produto 17 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/pão-arabe.jpeg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Arabian Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Arabian Burguer" data-price="18.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 17 item-->
+
+            <!--produto 18 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/pão-arabe-2.jpeg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Arabian Burguer</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Arabian Burguer" data-price="18.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 18 item-->
+            <!--produto 19 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/batata-frita-esp.jpeg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Batata Frita Bacon cheddar</p> 
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 29.90</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Batata Frita Bacon Cheddar" data-price="29.90">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 19 item-->
+
+            <!--produto 20 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/As-melhores-batatas-fritas-de-Santos-1-936x710.jpg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Meat Batata</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 18.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Meat Batata" data-price="18.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 20 item-->
+
+            <!--produto 21 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/como-fazer-batata-frita-topo.jpg.webp" alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Simple Batata</p>
+                    <p class="text-sm">Uma obra-prima entre duas fatias de pão tostado, recheada com um suculento hambúrguer de carne
+                        bovina, queijo cheddar derretido, alface crocante, tomate maduro e uma generosa porção de molho
+                        especial.</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 14</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Simple Batata" data-price="14">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 21 item-->
+            
+            <!--produto 22 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/refri-1.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Coca Cola</p>
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Coca Cola" data-price="7.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 22 item-->
+
+            <!--produto 23 item-->
+            <div class="flex gap-2 mt-5">
+                <img class="w-28 h-28 rounded-md hover:scale-110 duration-200" src="./assets/refri-2.svg"
+                    alt="hamburguer smash">
+
+                <div>
+                    <p class="font-bold">Guaraná</p>
+
+                    <div class="flex items-center gap-2 justify-between mt-3">
+                        <p class="font-bold text-lg">R$ 7.50</p>
+                        <button class="bg-gray-900 px-5 rounded add-to-cart-btn" data-name="Guaraná" data-price="7.50">
+                            <i class="fa fa-cart-plus text-lg text-white" ></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- fim produto 23 item-->
+            
+        </main>
+        
+    </div>
+    <!--FIM menu-->
+    
+    <!--Modal-->
+        <div class="bg-black/50 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal" >
+            <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+                <h2 class="text-center font-bold text-2xl mb-2">Meu Carrinho</h2>
+                <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+                <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+                <p class="font-bold mt-4">Endereço De Entrega:</p>
+                <input type="text" placeholder="Rua exemplo n°000" id="address" class="w-full border-2 p-1 rounded my-1"/>
+
+                <p class="text-red-500 hidden" id="address-warn">Forneça um endereço válido</p>
+                <p class="text-red-500 hidden" id="checkout-warn">Insira algum Produto, e clique novamente em finalizar Pedido</p>
+
+                <div class="flex items-center justify-between mt-5 w-full">
+                    <button id="close-modal-btn">Fechar</button>
+                    <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
+                </div>
+                
+
+            </div>
+        </div>
+    <!--fim modal-->
+
+    <!-- Button card footer-->
+     <footer class="w-full bg-red-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+        <button class="flex items-center gap-2 text-white font-bold" id="cart-btn">
+            (<span id="cart-count">0</span>)
+            Veja seu Carrinho
+            <i class="fa fa-cart-plus text-lg text-white"></i>
+        </button>
+     </footer>
+
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+     <script src="script.js"></script>
+
+
+</body>
+
+</html>
